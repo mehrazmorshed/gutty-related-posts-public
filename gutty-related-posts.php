@@ -37,7 +37,6 @@ function gutty_related_posts_activate_plugin() {
     $grp_keyword_handler->create_keyword_table();
 }
 register_activation_hook(__FILE__, 'gutty_related_posts_activate_plugin');
-add_action('plugins_loaded', 'gutty_related_posts_activate_plugin');
 
 function gutty_related_posts_create_tables_multisite($blog_id) {
     if (is_plugin_active_for_network(plugin_basename(__FILE__))) {
